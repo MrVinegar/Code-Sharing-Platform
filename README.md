@@ -1,5 +1,6 @@
 # Code-Sharing-Platform
 Platform where you can share public/private code
+Made with Spring Boot, Spring Data JPA, REST, H2 Database and Thymeleaf
 
 ### Add new Code Snippet
 Request `POST /api/code/new`

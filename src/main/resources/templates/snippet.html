@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Code</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+
+</head>
+<body>
+<div>
+    <p id="load_date" th:text="${#temporals.format(snippet.created, 'yyyy-MM-dd HH:mm:ss')}"></p>
+    <p th:if="${snippet.time_restricted}"  id="time_restriction">The code will be available for <span th:text="${snippet.secondsLeft}"></span> seconds</p>
+    <p th:if="${snippet.view_restricted}" id="views_restriction"><span th:text="${snippet.viewsAllowed}"></span> more views allowed</p>
+    <pre id="code_snippet"><code id="saved_snippet" th:text="${snippet.code}"></code></pre>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js">
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</html>

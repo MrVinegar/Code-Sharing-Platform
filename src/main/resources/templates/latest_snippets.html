@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+
+
+</head>
+<body>
+
+
+<div th:each="snippet : ${snippets}">
+    <span id="load_date" th:text="${#temporals.format(snippet.created, 'yyyy-MM-dd HH:mm:ss')}"></span>
+    <pre id="code_snippet"><code id="saved_snippet" th:text="${snippet.code}"></code></pre>
+</div>
+<div th:if="${#lists.isEmpty(snippets)}">
+    <h1>nothing to show - add some snippets first</h1>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</html>

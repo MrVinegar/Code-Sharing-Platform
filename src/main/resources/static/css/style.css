@@ -1,0 +1,88 @@
+html {
+    font-family: "Cantarell", sans-serif;
+    background-color: black;
+    height: 95%;
+    margin: auto;
+}
+
+h1 {
+    display: block;
+    background-color: black;
+    color: gainsboro;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    display: block;
+    background-image: linear-gradient(to right, black 0%, gainsboro 51%, #50e150 100%);
+    cursor: pointer;
+    color: gainsboro;
+    margin: 30px auto auto;
+    padding: 15px 30px;
+    transition: 0.7s;
+    background-size: 300% auto;
+    border: 5px #50e150;
+    box-shadow: 0 0 20px #96f4fa;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(2);
+    background-position: right center;
+    font-size: larger;
+    font-weight: bolder;
+    transition: 0.7s;
+}
+
+#load_date {
+    background-color: black;
+    box-shadow: 0 0 10px #96f4fa;
+    border-radius: 10px;
+    color: gainsboro;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+}
+
+.new_snippet {
+    display: block;
+    padding: 1em;
+    width: 80%;
+    min-height: 300px;
+    background-color: #96f4fa;
+    margin: auto;
+}
+
+#saved_snippet {
+    display: block;
+    padding: 1em;
+    min-height: 100px;
+    background-color: #96f4fa;
+    box-shadow: 0 0 10px #96f4fa;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+#time_label, #view_label {
+    display: block;
+    color: slategray;
+    margin: 10px auto auto;
+    text-align: center;
+}
+
+#views_restriction, #time_restriction {
+    display: block;
+    padding: 1em;
+    background-color: #484848;
+    box-shadow: 0 0 10px gainsboro;
+    border-radius: 10px;
+    color: gainsboro;
+    margin: 3px auto auto;
+}
